@@ -1,0 +1,487 @@
+:root{
+  --gri: #E8ECEB;
+  --kuyuGri:#8d9996;
+  --sari :#E09E50;
+  --acikSari :#e5bb88;
+  --mavi: #8CBDB9;
+  --acikMavi: #b2d8d5;
+  --lacivert :#2D3E4E;
+  --acikLacivert :#4c5966;
+}
+.form {
+  position: relative;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+background-color: var(--mavi);
+gap: 20px;
+justify-content: center;
+align-items: center;
+}
+
+.form .butonalani {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+#root{
+  padding: 0;
+}
+
+.form .buton {
+font-size: 1rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+border-radius: 10px;
+border: solid 1px rgb(211, 145, 22);
+border-bottom: solid 1px rgb(238, 214, 169);
+background: linear-gradient(135deg, rgb(211, 145, 22), rgb(236, 202, 138));
+color: #fff;
+font-weight: bolder;
+transition: all 0.2s ease;
+box-shadow: 0px 2px 3px #000d3848, inset 0px 4px 5px rgb(224, 196, 145),
+inset 0px -4px 5px rgb(160, 110, 16);
+}
+
+.form .buton:active {
+box-shadow: inset 0px 4px 5px rgb(211, 177, 115), inset 0px -4px 5px rgb(126, 86, 11);
+transform: scale(0.995);
+}
+
+.girdialani {
+position: relative;
+display: flex;
+flex-direction: row;
+}
+.girdialani label {
+position: absolute;
+bottom: 22px;
+color:var(--lacivert);
+pointer-events: none;
+background-color: transparent;
+left: 15px;
+transform: translateY(0.6rem);
+transition: all 0.3s ease;
+}
+.butonalani{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.girdialani input {
+padding: 10px 15px;
+font-size: 1rem;
+border-radius: 8px;
+border: solid 2px var(--lacivert);
+letter-spacing: 1px;
+width: 100%;
+
+}
+
+.girdialani input:focus,
+.girdialani input:valid {
+outline: none;
+border: solid 1px var(--sari);
+}
+
+.girdialani input:focus ~ label,
+.girdialani input:valid ~ label {
+transform: translateY(-51%) translateX(-10px) scale(0.8);
+background-color: var(--acikSari);
+padding: 0px 5px;
+color: white;
+font-weight: bold;
+letter-spacing: 1px;
+border: none;
+border-radius: 100px;
+}
+input[type="file"] {
+padding: 10px;
+font-size: 14px;
+}
+.kisiselbilgiler{
+display: flex;
+flex-direction: column;
+gap: 3px;
+
+}
+
+
+#preview {
+width: 50%;
+height: 50%;
+margin-top: 20px;
+text-align: center;
+}
+
+#preview img {
+width: 100%;
+height: 100%;
+border: 1px solid #ccc;
+margin-top: 10px;
+}
+#fileInput{
+background-color: var(--acikMavi);
+border: 2px solid var(--lacivert);
+width: 70%;
+}
+.form .close {
+display: none;
+}
+
+.hesapeklemealani{
+font-size: 1rem;
+margin-bottom: 20px;
+font-weight: bolder;
+}
+.hesapeklemealani a{
+color: var(--lacivert);
+text-decoration: none;
+}
+.hesapeklemealani a:hover {
+color: var(--sari);}
+.resimalani{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 20%;
+}
+
+button {
+font-family: inherit;
+font-size: 20px;
+background: var(--sari);
+color: white;
+padding: 0.7em 1em;
+padding-left: 0.9em;
+display: flex;
+align-items: center;
+border: none;
+border-radius: 16px;
+overflow: hidden;
+transition: all 0.2s;
+cursor: pointer;
+}
+
+
+.container{
+  display: grid;
+  grid-template-areas: 
+  "yenidurum"
+  "durumlar";
+  grid-gap: 10px;
+  width: 100%;
+  height: max-content;
+  grid-template-rows:300px max-content;
+}
+.yenidurum{
+  grid-area: yenidurum;
+  width: 100%;
+  text-align: center;
+  border: 4px solid var(--lacivert);
+
+}
+.durumlar{
+  grid-area: durumlar;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gri);
+  width: 100%;
+  text-align: center;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 4px solid var(--lacivert);
+
+}
+.kullanicibilgileri{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+.gelenrandevukartikapsayicisi {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  width: 50rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 4px;
+  border: 4px solid var(--lacivert);
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
+  color: var(--lacivert);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  font-size: 10px;
+  height: max-content;
+  gap: 5px;
+  }
+.aciklamaalani{
+  display: flex;
+  color: var(--lacivert);
+  font-size: 12px;
+  width: 30%;
+  height: 100%;
+
+}
+.durumresmialani{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: contain;
+  display: flex;
+  width: 30%;
+  border: 2px solid var(--lacivert);
+}
+.formresimalani{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+.konumbilgileri{
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.gelenrandevukartikapsayicisi:hover {
+  transform: translateY(-10px);
+  border-color: var(--sari);
+  }
+
+  .kullaniciresmi{
+  overflow: hidden;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  border: 4px solid var(--lacivert);
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  }
+
+  .kullaniciresmi svg {
+  width: 2.5rem;
+  fill: currentColor;
+  }
+
+  .kullaniciismi {
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  }
+
+  .kullaniciismi span {
+  display: block;
+  font-size: 10px;
+  }
+
+  .kabulredkapsayicisi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid var(--sari);
+  padding: 5px;
+  width: 10%;
+  font-size: 7px;
+  gap: 10px;
+  }
+  /*-- Responsive ----------------------*/
+  .kabulredsecimi{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  }
+  .clear {
+  clear: both;
+  }
+
+  .checkBox {
+  display: block;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px var(--lacivert);
+  }
+  
+
+  .checkBox div {
+  width: 60px;
+  height: 60px;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+  }
+  .checkBox .kabultransition{
+  
+  background-color: greenyellow;
+  }
+  .checkBox .redtransition{
+  
+  background-color: red;
+  }
+
+  .checkBox input[type=checkbox]:checked + div {
+  left: -10px;
+  top: -10px;
+  }
+
+  .checkBox input[type=checkbox] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+  }
+
+  .kabultransition {
+  transition: 300ms ease;
+  }
+  .redtransition {
+  transition: 300ms ease;
+  }
+
+  .duzenlebutonu {
+    font-family: inherit;
+    font-size: 10px;
+    background: var(--sari);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 39%;
+  }
+  .duzenlebutonu:hover{
+    background-color: var(--acikSari);
+  }
+  .duzenlebutonu span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .duzenlebutonu svg {
+    width: 10px;
+    height: 10px;
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .duzenlebutonu:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .duzenlebutonu:hover svg {
+    transform: translateX(1.8em) rotate(45deg) scale(1.1);
+  }
+  
+  .duzenlebutonu:hover span {
+    transform: translateX(5em);
+  }
+  
+  .duzenlebutonu:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  .duzenlemekonumkapsayicisi{
+    display: flex;
+    top: 0;
+  left: 0;
+  z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.577);
+    
+  }
+.duzeltmepopup{
+  
+  width: 50%;
+  height:50%;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  
+}
+.kapatbuton {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 1%;
+height: max-content;
+cursor: pointer;
+display: flex;
+align-items: center;
+background: var(--lacivert);
+border: none;
+border-radius: 50%;
+box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+background: var(--lacivert);
+width: max-content;
+}
+.kapatbuton svg {
+width: 10px;
+height: 10px;
+fill: #eee;
+}
+
+.kapatbuton:hover {
+background: var(--acikLacivert);
+}
+.kapatbuton:focus {
+outline: none;
+}
+@media (max-width: 768px) {
+  .yenidurum{
+    height: max-content;
+    background-color: var(--mavi);
+  }
+  .form{
+    flex-direction: column;
+    height: max-content;
+  }
+  .container{
+    grid-template-rows: max-content max-content;
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giris yapmak</title>
+
+    <style>
+
+:root{
+            --gri: #E8ECEB;
+            --kuyuGri:#8d9996;
+            --sari :#E09E50;
+            --acikSari :#e5bb88;
+            --mavi: #8CBDB9;
+            --acikMavi: #b2d8d5;
+            --lacivert :#2D3E4E;
+            --acikLacivert :#4c5966;
+        }
+body {
+    display: flex;
+    height:700px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--acikLacivert);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  border: solid 4px var(--lacivert);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--mavi);
+  width: 50%;
+  height: 70%;
+  flex-direction: column;
+}
+
+.container .ustbilgi {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mavi);
+  gap: 20px;
+}
+
+.form .butonalani {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.form .buton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  border: solid 1px rgb(211, 145, 22);
+  border-bottom: solid 1px rgb(238, 214, 169);
+  background: linear-gradient(135deg, rgb(211, 145, 22), rgb(236, 202, 138));
+  color: #fff;
+  font-weight: bolder;
+  transition: all 0.2s ease;
+  box-shadow: 0px 2px 3px #000d3848, inset 0px 4px 5px rgb(224, 196, 145),
+    inset 0px -4px 5px rgb(160, 110, 16);
+}
+
+.form .buton:active {
+  box-shadow: inset 0px 4px 5px rgb(211, 177, 115), inset 0px -4px 5px rgb(126, 86, 11);
+  transform: scale(0.995);
+}
+
+.girdialani {
+  position: relative;
+}
+
+.girdialani label {
+  position: absolute;
+  bottom: 22px;
+  color:var(--lacivert);
+  pointer-events: none;
+  background-color: transparent;
+  left: 15px;
+  transform: translateY(0.6rem);
+  transition: all 0.3s ease;
+}
+
+.girdialani input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: solid 2px var(--lacivert);
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+.girdialani input:focus,
+.girdialani input:valid {
+  outline: none;
+  border: solid 1px var(--sari);
+}
+
+.girdialani input:focus ~ label,
+.girdialani input:valid ~ label {
+  transform: translateY(-51%) translateX(-10px) scale(0.8);
+  background-color: var(--acikSari);
+  padding: 0px 5px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 100px;
+}
+
+
+
+.form .close {
+  display: none;
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="ustbilgi">SignIn to your account</div>
+        <form class="form" action="">
+          <div class="girdialani">
+            <input
+              required=""
+              autocomplete="off"
+              type="text"
+              name="isimsoyisim"
+              id="isimsoyisim"
+            />
+            <label >isim soyisim</label>
+          </div>
+          <div class="girdialani">
+            <input
+              required=""
+              autocomplete="off"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <label >mail adresi</label>
+          </div>
+          <div class="girdialani">
+            <input
+              required=""
+              autocomplete="off"
+              type="password"
+              name="sifre"
+              id="sifre"
+            />
+            <label >sifre</label>
+          </div>
+      
+          <div class="butonalani">
+            <button class="buton">Submit</button>
+          </div>
+        </form>
+      </div>
+      <script src="/html_projeleri/html_sayfalari/doktorgiris.js"> </script>
+</body>
+</html>
