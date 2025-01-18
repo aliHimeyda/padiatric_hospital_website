@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/"
-  to = "./html_sayfalari/ana_sayfa.html"
+  from = "/html_sayfalari"
+  to = "/ana_sayfa.html"
   status = 200
