@@ -95,7 +95,6 @@ if (asistangirisyaptimi()=="true") {
     const girisyapanasistan = JSON.parse(localStorage.getItem("hangiasistangirisyapti"));
     console.log(girisyapanasistan);
     const parent = document.querySelector(".girisbilgimenusu");
-    parent.style.display = "flex";
     const child = document.createElement("li");
     child.innerHTML = girisyapanasistan.ad_soyad + " <br>" + girisyapanasistan.email;
     parent.appendChild(child);
